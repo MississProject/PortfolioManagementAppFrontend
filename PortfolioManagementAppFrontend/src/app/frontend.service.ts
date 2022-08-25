@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from './user';
 import { StockOrder } from './stockOrder';
+import { Stock } from './stock';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,11 @@ export class FrontendService {
   getOrderHistory(): Observable<StockOrder[]> {
     return this.http.get(`${this.baseUrl}stockorders`) as Observable<StockOrder[]>;
     }
-  
+
+  getAllStocks(): Observable<Stock[]> {
+    return this.http.get(`${this.baseUrl}stock`) as Observable<Stock[]>;
+    }
+    
+
 
 }
