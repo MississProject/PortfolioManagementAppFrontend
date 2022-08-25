@@ -10,7 +10,7 @@ import { User } from '../user';
 })
 export class PortfolioComponent implements OnInit {
 
-  user?: Observable<User>;
+  user?: User;
 
   constructor(private frontendService: FrontendService) {
     
@@ -18,8 +18,11 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
     this.frontendService.getUserByEmail("abc@gmail.com").subscribe(
-      (data:any) => this.user = data, 
+      (data:any) => {
+        this.user = data, console.log(data)
+      },
       (err:any) => console.log("Error")
+      
     );
   }
 
