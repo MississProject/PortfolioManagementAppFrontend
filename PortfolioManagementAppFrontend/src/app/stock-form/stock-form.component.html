@@ -1,0 +1,21 @@
+<h2>Purchase a stock</h2>
+<form #f="ngForm" (ngSubmit)="purchase(f)" class="need-validation" novalidate>
+    <div class="row g-3">
+       <div class="col-md-4">
+        <label class="form-label px-2">Stock Name</label>
+        <select class="form-select-size-md" required [(ngModel)]="selectedStock" name="stock">
+            <option *ngFor="let stock of stocks" [ngValue]="stock">{{stock.stock_name}}</option>
+        </select>
+        </div>
+        <div class="col-md-5">
+            <label class="form-label px-2">Number of Shares</label>
+            <input type="number" required [(ngModel)]="numOfShares" name="numOfShares" required>
+        </div>
+        <div class="col-md-3">
+            <button type="submit" [disabled]="!f.valid">Purchase</button>
+        </div>     
+    </div>
+    
+    
+</form>
+
