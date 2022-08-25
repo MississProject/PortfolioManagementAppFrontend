@@ -1,1 +1,20 @@
-<p>order-history works!</p>
+<div class="table-responsive">
+    <table class="center table table-striped table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Order Id</th>
+                <th scope="col">Order Status</th>
+                <th scope="col">Stock Symbol</th>
+                <th scope="col">Number of Shares</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of stockOrder">
+                <td>{{order.orderID}}</td>
+                <td>{{order.orderStatus}}</td>
+                <td>{{order.stockSymbol}}</td>
+                <td>{{order.numOfShares}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

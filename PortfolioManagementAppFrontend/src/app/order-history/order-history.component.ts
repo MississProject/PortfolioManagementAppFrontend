@@ -11,7 +11,7 @@ import { User } from '../user';
 export class OrderHistoryComponent implements OnInit {
 
   user?: User;
-  stockOrder?: StockOrder;
+  stockOrder?: StockOrder[];
 
   constructor(private frontendService: FrontendService) { }
 
