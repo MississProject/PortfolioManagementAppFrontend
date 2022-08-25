@@ -1,0 +1,41 @@
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+  <div class="col d-flex align-items-start">
+    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+      <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+    </div>
+    <div>
+      <h2>Current User</h2>
+      <p>User Details</p>
+    </div>
+  </div>
+  <div class="col d-flex align-items-start">
+    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+      <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
+    </div>
+    <div>
+      <h2>Total Balance</h2>
+      <p>{{user?.funds}}</p>
+      <a href="#" class="btn btn-primary">
+        Add Funds
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Stock Symbol</th>
+    <th scope="col">Number of Shares</th>
+    <th scope="col">Total Value of Shares</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of stockOrderWithCost">
+      <td>{{order.stockSymbol}}</td>
+      <td>{{order.numOfShares}}</td>
+      <td>{{order.cost}}</td>
+  </tr>
+  </tbody>
+</table>

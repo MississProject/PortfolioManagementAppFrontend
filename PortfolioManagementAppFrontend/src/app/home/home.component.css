@@ -1,0 +1,7 @@
+table table-striped {
+  width: 100%;
+}
+
+mat-header-cell, mat-cell {
+  justify-content: center;
+}

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from './user';
+import { StockOrder } from './stockOrder';
 
 @Injectable({
   providedIn: 'root'
@@ -16,4 +17,11 @@ export class FrontendService {
     return this.http.get(`${this.baseUrl}portfolio/${email}`) as Observable<User>;
     }
 
+  getOrderHistory(): Observable<StockOrder[]> {
+      return this.http.get(`${this.baseUrl}stockorders`) as Observable<StockOrder[]>;
+      }
+
+  getStockBySymbol(stockSymbol: string): Observable<StockOrder[]>{
+    return this.http.get(`${this.baseUrl}/stock/${stockSymbol}`) as Observable<StockOrder[]>;
+  }
 }
