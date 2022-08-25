@@ -5,7 +5,8 @@
     </div>
     <div>
       <h2>Current User</h2>
-      <p>User Details</p>
+      <p>{{user?.userName}}</p>
+      <p>{{user?.emailAddress}}</p>
     </div>
   </div>
   <div class="col d-flex align-items-start">
@@ -33,7 +34,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let order of stockOrderWithCost">
-      <td>{{order.stockSymbol}}</td>
+      <td><b>{{order.stockSymbol}}</b></td>
       <td>{{order.numOfShares}}</td>
       <td>{{order.cost}}</td>
   </tr>

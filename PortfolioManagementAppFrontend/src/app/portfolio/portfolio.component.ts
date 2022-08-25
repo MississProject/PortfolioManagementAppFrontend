@@ -10,7 +10,7 @@ import { User } from '../user';
 })
 export class PortfolioComponent implements OnInit {
 
-  user?: User;
+  user!: User;
 
   constructor(private frontendService: FrontendService) {
     
