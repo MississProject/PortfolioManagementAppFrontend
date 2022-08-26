@@ -1,20 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { FrontendService } from '../frontend.service';
 import { User } from '../user';
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.css']
+  selector: 'app-buy-stocks-page',
+  templateUrl: './buy-stocks-page.component.html',
+  styleUrls: ['./buy-stocks-page.component.css']
 })
-export class PortfolioComponent implements OnInit {
+export class BuyStocksPageComponent implements OnInit {
 
   user!: User;
 
-  constructor(private frontendService: FrontendService) {
-    
-  }
+  constructor(private frontendService: FrontendService) { }
 
   ngOnInit(): void {
     this.frontendService.getUserByEmail("abc@gmail.com").subscribe(

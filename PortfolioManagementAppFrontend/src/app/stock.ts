@@ -1,7 +1,7 @@
 export class Stock {
     constructor (
-        public stockSymbol: string,
-        public stockName: string,
-        public stockPrice: number
+        public stock_symbol: string,
+        public stock_name: string,
+        public stock_price: number
     ) {}
-} 
+}
