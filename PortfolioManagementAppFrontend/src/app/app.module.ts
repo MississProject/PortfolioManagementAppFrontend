@@ -17,7 +17,10 @@ import { StockFormComponent } from './stock-form/stock-form.component';
     AppComponent,
     PortfolioComponent,
     BuyStocksPageComponent,
-    StockFormComponent
+    StockFormComponent,
+    StockListComponent,
+    HomeComponent
+    
   ],
   imports: [
     FormsModule,
