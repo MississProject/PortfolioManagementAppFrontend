@@ -68,3 +68,27 @@ mat-header-cell, mat-cell {
 .card {
   margin-bottom: 1.5rem;
 } 
+
+.parent{
+  display: grid;
+  justify-content: center;
+}
+
+.child{
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tablemid{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}

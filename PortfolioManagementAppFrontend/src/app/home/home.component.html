@@ -1,21 +1,36 @@
-<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-  <div class="col d-flex align-items-start">
-    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-      <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-    </div>
-    <div>
+<div class="container-fluid">
+<!-- <div class="row g-4 py-5 row-cols-1 row-cols-lg-3"> -->
+  <div class="parent">
+    <div class="child">
       <h2>Current User</h2>
-      <p>{{user?.userName}}</p>
-      <p>{{user?.emailAddress}}</p>
+      <p style="text-align:center;">{{user?.userName}}</p>
+      <p style="text-align:center;">{{user?.emailAddress}}</p>
     </div>
   </div>
-  <div class="col d-flex align-items-start">
-    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-      <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
+
+  <div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Stock Symbol</th>
+        <th scope="col">Number of Shares</th>
+        <th scope="col">Total Value of Shares</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of stockOrderWithCost">
+          <td><b>{{order.stockSymbol}}</b></td>
+          <td>{{order.numOfShares}}</td>
+          <td>{{order.cost}}</td>
+      </tr>
+      </tbody>
+    </table>
     </div>
-    <div>
+
+  <div class="parent">
+    <div class="tablemid">
       <h2>Total Balance</h2>
-      <p>{{user?.funds}}</p>
+      <p style="text-align:center;">{{user?.funds}}</p>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Add More Funds
@@ -103,18 +118,14 @@
           <div class="form-group col-sm-4">
           <label for="ccyear">Year</label>
           <select class="form-control" id="ccyear">
-          <option>2014</option>
-          <option>2015</option>
-          <option>2016</option>
-          <option>2017</option>
-          <option>2018</option>
-          <option>2019</option>
-          <option>2020</option>
-          <option>2021</option>
-          <option>2022</option>
           <option>2023</option>
           <option>2024</option>
           <option>2025</option>
+          <option>2026</option>
+          <option>2027</option>
+          <option>2028</option>
+          <option>2029</option>
+          <option>2030</option>
           </select>
           </div>
           <div class="col-sm-4">
@@ -142,22 +153,5 @@
 </div>
     </div>
   </div>
+
 </div>
-
-
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th scope="col">Stock Symbol</th>
-    <th scope="col">Number of Shares</th>
-    <th scope="col">Total Value of Shares</th>
-  </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let order of stockOrderWithCost">
-      <td><b>{{order.stockSymbol}}</b></td>
-      <td>{{order.numOfShares}}</td>
-      <td>{{order.cost}}</td>
-  </tr>
-  </tbody>
-</table>

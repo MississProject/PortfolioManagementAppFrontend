@@ -8,6 +8,7 @@ import { User } from '../user';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { Stock } from '../stock';
+import { NgForm } from '@angular/forms';
 import { StockOrderWithCost } from '../stockOrderWithCost';
 
 @Component({
@@ -27,7 +28,6 @@ constructor(private frontendService: FrontendService) { }
  
   ngOnInit(): void {
 
-    
     this.frontendService.getOrderHistory().subscribe(
       (data:any) => {
         this.stockOrder = data, console.log(data)
@@ -65,3 +65,4 @@ constructor(private frontendService: FrontendService) { }
   }
 
 }
+
