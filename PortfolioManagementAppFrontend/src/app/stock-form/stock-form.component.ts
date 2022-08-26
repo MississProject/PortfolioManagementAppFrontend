@@ -3,6 +3,7 @@ import { Stock } from '../stock';
 import { FrontendService } from '../frontend.service';
 import { NgForm } from '@angular/forms';
 import { StockOrder } from '../stock-order';
+import { Router } from "@angular/router"
 
 @Component({
   selector: 'app-stock-form',
@@ -15,7 +16,7 @@ export class StockFormComponent implements OnInit {
   numOfShares!: number;
   newOrder!: StockOrder;
 
-  constructor(private frontendService: FrontendService) {
+  constructor(private frontendService: FrontendService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -38,5 +39,6 @@ export class StockFormComponent implements OnInit {
       error: (err:any) => console.log("Error")
     })
     form.reset();
+    this.router.navigate(['/']);
   }
 }
