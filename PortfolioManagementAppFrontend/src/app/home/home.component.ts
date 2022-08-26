@@ -3,7 +3,7 @@ import { PipeTransform } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { FormControl } from '@angular/forms';
 import { FrontendService } from '../frontend.service';
-import { StockOrder } from '../stockOrder';
+import { StockOrder } from '../stock-order';
 import { User } from '../user';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';

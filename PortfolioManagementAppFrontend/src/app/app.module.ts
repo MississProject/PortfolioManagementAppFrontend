@@ -26,6 +26,7 @@ import { StockFormComponent } from './stock-form/stock-form.component';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
