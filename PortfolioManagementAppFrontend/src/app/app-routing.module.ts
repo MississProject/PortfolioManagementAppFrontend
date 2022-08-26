@@ -8,7 +8,6 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'buystocks', component: BuyStocksPageComponent},
-  { path: 'portfolio', component: PortfolioComponent },
   { path: 'orderHistory', component: OrderHistoryComponent }
 ];
 
