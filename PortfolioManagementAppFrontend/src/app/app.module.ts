@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { BuyStocksPageComponent } from './buy-stocks-page/buy-stocks-page.component';
 import { StockListComponent } from './stock-list/stock-list.component';
 import { StockFormComponent } from './stock-form/stock-form.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 
 @NgModule({
@@ -19,8 +20,8 @@ import { StockFormComponent } from './stock-form/stock-form.component';
     BuyStocksPageComponent,
     StockFormComponent,
     StockListComponent,
-    HomeComponent
-    
+    HomeComponent,
+    OrderHistoryComponent
   ],
   imports: [
     FormsModule,
