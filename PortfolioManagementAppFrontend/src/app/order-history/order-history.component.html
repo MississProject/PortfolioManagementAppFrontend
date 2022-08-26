@@ -15,7 +15,7 @@
         <tbody>
             <tr *ngFor="let order of stockOrderWithCost">
                 <td>{{order.orderID}}</td>
-                <td>{{order.orderStatus}}</td>
+                <td>{{order.orderStatus === 0 ? "IDLE" : order.orderStatus === 1  ? "IN PROCESS" : order.orderStatus === 2 ? "SUCCESS" :"FAILURE"}}</td>
                 <td>{{order.stockSymbol}}</td>
                 <td>{{order.numOfShares}}</td>
                 <td>{{order.cost.toFixed(1)}}</td>
