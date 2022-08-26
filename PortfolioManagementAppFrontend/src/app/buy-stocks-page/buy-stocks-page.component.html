@@ -1,8 +1,8 @@
 <div class="container-fluid">
-    <h1 class="mt-5 text-center">Purchase Stocks</h1>
+    <h1 class="text-center">Purchase Stocks</h1>
     <div class="d-flex align-items-start" *ngIf="user">
-        <h4>Current Balance: </h4>
-        <h4>${{user.funds | number: '.2-2'}}</h4>
+        <h4>Current Balance:</h4>&nbsp;
+        <h4>{{user.funds | number: '.2-2'}} USD</h4>
     </div>
     <hr class="col-3 col-md-2">
     <app-stock-list></app-stock-list>

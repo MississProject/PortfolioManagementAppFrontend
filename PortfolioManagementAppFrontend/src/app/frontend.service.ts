@@ -23,10 +23,6 @@ export class FrontendService {
     return this.http.get(`${this.baseUrl}portfolio/${email}`) as Observable<User>;
   }
 
-  getAllStocks(): Observable<Array<Stock>> {
-    return this.http.get(`${this.baseUrl}stock`) as Observable<Array<Stock>>;
-  }
-
   buyStock(stockOrder: StockOrder): Observable<StockOrder> {
     return this.http.post(`${this.baseUrl}stockorders`, stockOrder) as Observable<StockOrder>;
   }
@@ -38,4 +34,10 @@ export class FrontendService {
   getStockBySymbol(stockSymbol: string): Observable<StockOrder[]>{
     return this.http.get(`${this.baseUrl}/stock/${stockSymbol}`) as Observable<StockOrder[]>;
   }
+
+
+  getAllStocks(): Observable<Stock[]> {
+    return this.http.get(`${this.baseUrl}stock`) as Observable<Stock[]>;
+    }
+    
 }
