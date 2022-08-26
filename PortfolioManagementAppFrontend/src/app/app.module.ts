@@ -11,17 +11,15 @@ import { BuyStocksPageComponent } from './buy-stocks-page/buy-stocks-page.compon
 import { StockListComponent } from './stock-list/stock-list.component';
 import { StockFormComponent } from './stock-form/stock-form.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     PortfolioComponent,
-    HomeComponent,
     BuyStocksPageComponent,
-    StockListComponent,
     StockFormComponent
   ],
   imports: [
-    HttpClientModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,
